@@ -1,4 +1,4 @@
-# PalWorld Server Setting Editor
+# Palworld Server Setting Editor
 
 **Made to make it easier for you to modify the settings, some codes may not be very user friendly.**
 
