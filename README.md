@@ -1,4 +1,4 @@
-# PalWorld Server Setting Edito
+# PalWorld Server Setting Editor
 
 # [README (English)](./README_EN.md)
 
