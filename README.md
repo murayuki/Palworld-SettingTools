@@ -1,4 +1,4 @@
-# PalWorld Server Setting Editor
+# Palworld Server Setting Editor
 
 ------
 
