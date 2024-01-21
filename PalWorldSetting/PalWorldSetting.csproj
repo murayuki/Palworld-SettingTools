@@ -83,6 +83,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="lib\Data.cs" />
     <Compile Include="lib\FolderSelectDialog.cs" />
     <Compile Include="lib\Reflector.cs" />
     <Compile Include="lib\Clan.cs" />

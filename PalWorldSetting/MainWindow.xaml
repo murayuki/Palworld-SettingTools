@@ -8,44 +8,43 @@
         ResizeMode="NoResize"
         WindowStartupLocation="CenterScreen"
         
-        Title="PalWorld 設定編輯" Height="600" Width="900">
+        Title="Palworld Setting Editor" Height="600" Width="900">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="12*"/>
-            <RowDefinition Height="160*"/>
-            <RowDefinition Height="10*"/>
+            <RowDefinition Height="32*"/>
+            <RowDefinition Height="431*"/>
+            <RowDefinition Height="31*"/>
             <RowDefinition Height="20*"/>
-            <RowDefinition Height="15*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="30*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition Width="6*"/>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition/>
-            <ColumnDefinition Width="6*"/>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="6*"/>
-            <ColumnDefinition Width="2*"/>
-            <ColumnDefinition/>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="30*"/>
+            <ColumnDefinition Width="10*"/>
+            <ColumnDefinition Width="35*"/>
+            <ColumnDefinition Width="18*"/>
+            <ColumnDefinition Width="7*"/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="dataGrid" IsEnabled="False" Grid.Column="1" ItemsSource="{Binding}" AutoGenerateColumns="False" Margin="0,24,0,0" Grid.RowSpan="2" Grid.ColumnSpan="9" FontFamily="Microsoft JhengHei" FontSize="16">
+        <DataGrid x:Name="dataGrid" IsEnabled="False" ItemsSource="{Binding}" AutoGenerateColumns="False" Margin="0,24,0,0" Grid.RowSpan="2" FontFamily="Microsoft JhengHei" FontSize="16" Grid.Column="1" Grid.ColumnSpan="9">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="變量" Width="200" Binding="{Binding CKey}" IsReadOnly="True"/>
-                <DataGridTextColumn Header="值" Width="200" Binding="{Binding CValue}"/>
-                <DataGridTextColumn Header="備註" Width="430" 
+                <DataGridTextColumn Header="Key" Width="200" Binding="{Binding CKey}" IsReadOnly="True"/>
+                <DataGridTextColumn Header="Value" Width="200" Binding="{Binding CValue}"/>
+                <DataGridTextColumn Header="Remark" Width="430" 
                                          Binding="{Binding CRemark}" IsReadOnly="True"/>
             </DataGrid.Columns>
         </DataGrid>
 
 
-        <Button x:Name="LoadFile" IsEnabled="True" Grid.Row="3" Grid.Column="2" Content="讀取文件" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="120" FontFamily="Microsoft JhengHei" FontWeight="Bold" FontSize="18" Click="LoadFile_Click" RenderTransformOrigin="0.542,0.875" />
-        <Button x:Name="Re_Load" IsEnabled="False" Grid.Row="3" Grid.Column="4" Content="RE" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="60" FontFamily="Microsoft JhengHei" FontWeight="Bold" FontSize="18" RenderTransformOrigin="0.542,0.875" Click="Re_Load_Click" />
+        <Button x:Name="LoadFile" IsEnabled="True" Grid.Row="2" Content="讀取文件" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="140" FontFamily="Microsoft JhengHei" FontWeight="Bold" FontSize="18" Click="LoadFile_Click" RenderTransformOrigin="0.542,0.875" Grid.Column="2" Margin="0,31,0,0" Grid.RowSpan="3" />
+        <Button x:Name="ReLoad" IsEnabled="False" Grid.Row="4" Grid.Column="4" Content="重新讀取" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="120" FontFamily="Microsoft JhengHei" FontWeight="Bold" FontSize="18" RenderTransformOrigin="0.542,0.875" Click="ReLoad_Click" />
 
-
-        <Button x:Name="CloseFile" IsEnabled="False" Content="關閉文件" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="120" FontFamily="Microsoft JhengHei" FontWeight="Bold" FontSize="18" Click="CloseFile_Click" Grid.Column="6" Grid.Row="3"/>
-        <Button x:Name="SaveFile" IsEnabled="False" Content="保存文件" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="120" FontFamily="Microsoft JhengHei" FontWeight="Bold" FontSize="18" Click="SaveFile_Click" Grid.Column="8" Grid.Row="3"/>
-
+        <Button x:Name="CloseFile" IsEnabled="False" Content="關閉文件" HorizontalAlignment="Center" VerticalAlignment="Center" Height="40" Width="120" FontFamily="Microsoft JhengHei" FontWeight="Bold" FontSize="18" Click="CloseFile_Click" Grid.Column="6" Grid.Row="4"/>
+        <Button x:Name="SaveFile" IsEnabled="False" Content="保存文件" HorizontalAlignment="Center" VerticalAlignment="Top" Height="60" Width="140" FontFamily="Microsoft JhengHei" FontWeight="Bold" FontSize="18" Click="SaveFile_Click" Grid.Column="8" Grid.Row="2" Margin="0,31,0,0" Grid.RowSpan="3"/>
     </Grid>
 </Window>

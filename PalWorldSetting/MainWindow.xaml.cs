@@ -1,26 +1,15 @@
-﻿using FolderSelect;
-using SimpleJSON;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Diagnostics;
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 using System.Windows;
+using PalWorldSetting.lib;
+using FolderSelect;
+using SimpleJSON;
+using System.Linq;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Markup;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-
-using PalWorldSetting.Clan;
+using System.Diagnostics;
 
 namespace PalWorldSetting
 {
@@ -29,10 +18,15 @@ namespace PalWorldSetting
     /// </summary>
     public partial class MainWindow : Window
     {
-        public JSONNode Remarks;
+
         public string ConfigPath = "none";
         public ObservableCollection<Config> ConfigData { get; set; }
         public Dictionary<string, string> OriginalConfig;
+
+        private string DataGridColumnKey;
+        private string DataGridColumnVal;
+        private string DataGridColumnRemark;
+
 
         public MainWindow()
         {
@@ -40,38 +34,39 @@ namespace PalWorldSetting
             OriginalConfig = new Dictionary<string, string>();
           
             InitializeComponent();
-
             ZClan.Init();
-            LoadRemarkFile();　/// 讀取 Remark
+            ZData.LoadI18nFile();
+            InitI18nFromUI();
+
+            ZData.LoadRemarkFile();
         }
 
-        #region Load Remark Json
-        private void LoadRemarkFile()
+        #region UI SET I18n
+        private void InitI18nFromUI()
         {
-            if (!File.Exists("./Remark.json"))
-            {
-                MessageBox.Show("Remark.json 文件不存在請檢查文件完整\n\n確定後將關閉程式", "錯誤", MessageBoxButton.OK, MessageBoxImage.Error);
-                Environment.Exit(0);
-                return;
-            }
+            this.Title = (string)ZData.I18n["UI_WINDOW_TITLE_TEXT"];
+            LoadFile.Content = (string)ZData.I18n["UI_LOAD_BUTTON_TEXT"];
+            ReLoad.Content = (string)ZData.I18n["UI_RELOAD_BUTTON_TEXT"];
+            CloseFile.Content = (string)ZData.I18n["UI_CLOSE_BUTTON_TEXT"];
+            SaveFile.Content = (string)ZData.I18n["UI_SAVE_BUTTON_TEXT"];
 
-            try
+            string[] colHeaders = { "Key", "Value", "Remark" };
+            foreach (string colTitle in colHeaders)
             {
-                string JsonString = File.ReadAllText("./Remark.json");
-                Remarks = JSON.Parse(JsonString);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message, "Remark 讀取錯誤");
-                Environment.Exit(0);
+                DataGridTextColumn dataGridColumn = dataGrid.Columns.Single(c => c.Header.ToString() == colTitle) as DataGridTextColumn;
+                if (dataGridColumn != null)
+                {
+                    dataGridColumn.Header = (string)ZData.I18n[$"UI_COLUMN_{colTitle.ToUpper()}_TITLE_TEXT"];
+                }
             }
         }
         #endregion
 
+        #region fun
         private string ShowFolderDialog()
         {
             FolderSelectDialog fsd = new FolderSelectDialog();
-            fsd.Title = "選擇設定文件所在目錄";
+            fsd.Title = ZData.I18n["UI_SELECT_FOLDER_TITLE_TEXT"];
             fsd.InitialDirectory = Directory.GetCurrentDirectory();
             if (fsd.ShowDialog(IntPtr.Zero))
             {
@@ -86,40 +81,19 @@ namespace PalWorldSetting
             return "none";
         }
 
-        static string ReadOptionSettingsLine(string filePath)
-        {
-            // 读取文件所有行
-            string[] lines = File.ReadAllLines(filePath);
-
-            // 查找以 "OptionSettings=" 开头的行
-            foreach (string line in lines)
-            {
-                if (line.StartsWith("OptionSettings="))
-                {
-                    // 返回=后的值
-                    return line.Substring("OptionSettings=".Length);
-                }
-            }
-
-            // 如果没有找到匹配的行，则返回空字符串或者抛出异常，取决于你的需求
-            return string.Empty;
-        }
-
         private void LoadData(string path)
         {
             bool LoadFound = true;
 
             if (path == "none")
             {
-                MessageBox.Show("錯誤目錄...\n\n" +
-                       "1.選擇文件目錄 \n(範例: D:\\PalWorld Server\\Pal\\Saved\\Config\\WindowsServer)\n" +
-                       "2.路徑中必須包含 PalWorldSettings.ini", "錯誤", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show((string)ZData.I18n["UI_MESSAGE_SELECT_FOLDER_ERROR_TEXT"], (string)ZData.I18n["UI_MESSAGE_ERROR_TITLE_TEXT"], MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
 
             try
             {
-                string optionSettingsLine = ReadOptionSettingsLine(path);
+                string optionSettingsLine = ZData.ReadOptionSettingsLine(path);
                 var matches = Regex.Matches(optionSettingsLine, @"(\w+)=(\""[^\""]*\""|\d+\.\d+|\w+),?");
                 foreach (Match match in matches)
                 {
@@ -127,25 +101,25 @@ namespace PalWorldSetting
 
                     string key = match.Groups[1].Value.Trim();
                     string value = match.Groups[2].Value.Trim();
-                    if (value.StartsWith("\"") && value.EndsWith("\""))
-                    {
-                        value = value.Substring(1, value.Length - 2);
-                    }
+                    value = value.Replace("\"", ""); // Replace "
+
+                    string Remark = (!ZData.Remarks[key]) ? (string)ZData.I18n["UI_REMARK_MISSING_TEXT"] : (string)ZData.Remarks[key];
 
                     OriginalConfig.Add(key, value);
                     ConfigData.Add(new Config()
                     {
                         CKey = key,
                         CValue = value,
-                        CRemark = Remarks[key]
+                        CRemark = Remark
                     });
+
                     // Debug
-                    Trace.WriteLine($"{key}: {value}");
+                    //Trace.WriteLine($"{key}: {value}");
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "錯誤", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(ex.Message, (string)ZData.I18n["UI_MESSAGE_ERROR_TITLE_TEXT"], MessageBoxButton.OK, MessageBoxImage.Error);
                 LoadFound = false;
             }
 
@@ -153,13 +127,13 @@ namespace PalWorldSetting
             {
                 dataGrid.ItemsSource = ConfigData;
                 LoadFile.IsEnabled = false;
-                Re_Load.IsEnabled = true;
-
+                ReLoad.IsEnabled = true;
                 CloseFile.IsEnabled = true;
                 SaveFile.IsEnabled = true;
                 dataGrid.IsEnabled = true;
             }
         }
+        #endregion
 
         #region Load File
         private void LoadFile_Click(object sender, RoutedEventArgs e)
@@ -169,13 +143,13 @@ namespace PalWorldSetting
         }
         #endregion
 
-        #region RE Load
+        #region RELoad
 
-        private void Re_Load_Click(object sender, RoutedEventArgs e)
+        private void ReLoad_Click(object sender, RoutedEventArgs e)
         {
             ClearStatus();
             LoadData(ConfigPath);
-            MessageBox.Show("重新讀取文件", "警告", MessageBoxButton.OK, MessageBoxImage.Warning);
+            MessageBox.Show((string)ZData.I18n["UI_MESSAGE_RELOAD_TEXT"], (string)ZData.I18n["UI_MESSAGE_WARNING_TITLE_TEXT"], MessageBoxButton.OK, MessageBoxImage.Warning);
         }
         #endregion
 
@@ -217,11 +191,11 @@ namespace PalWorldSetting
             catch (Exception ex)
             {
                 Found = false;
-                MessageBox.Show(ex.Message, "錯誤", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show(ex.Message, (string)ZData.I18n["UI_MESSAGE_ERROR_TITLE_TEXT"], MessageBoxButton.OK, MessageBoxImage.Error);
             }
 
             if (Found) { 
-                MessageBox.Show("成功保存設置", "完成", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show((string)ZData.I18n["UI_MESSAGE_SAVE_OK_TEXT"], (string)ZData.I18n["UI_MESSAGE_OK_TITLE_TEXT"], MessageBoxButton.OK, MessageBoxImage.Information);
                 ClearStatus();
                 ConfigPath = "none";
             }
@@ -229,14 +203,13 @@ namespace PalWorldSetting
         #endregion
 
         #region Close File
-
         private void ClearStatus()
         {
             dataGrid.ItemsSource = "";
             LoadFile.IsEnabled = true;
             CloseFile.IsEnabled = false;
             SaveFile.IsEnabled = false;
-            Re_Load.IsEnabled = false;
+            ReLoad.IsEnabled = false;
             dataGrid.IsEnabled = false;
             ConfigData.Clear();
             OriginalConfig.Clear();
@@ -248,13 +221,5 @@ namespace PalWorldSetting
             ConfigPath = "none";
         }
         #endregion
-
-        public class Config
-        {
-            public string CKey { get; set; }
-            public string CValue { get; set; }
-            public string CRemark { get; set; }
-        }
-
     }
 }

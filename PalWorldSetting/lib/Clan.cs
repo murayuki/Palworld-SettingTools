@@ -1,12 +1,6 @@
-﻿
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
-namespace PalWorldSetting.Clan
+namespace PalWorldSetting.lib
 {
     public class ZClan
     {
