@@ -1,63 +1,46 @@
-# PalWorld Server Setting Editor
+# PalWorld Server Setting Edito
 
-------
+# [README (English)](./README_EN.md)
 
 ### 為了讓自己方便修改設定所製作，可能有些代碼不太友好
 
-**Made to make it easier for you to modify the settings, some codes may not be very user friendly.**
-
 ### 需要請自取, 當然我不能保證不會有錯誤, 目前自己測試是正常的
 
-**If you need it, please pick it up. Of course, I can't guarantee that there won't be any bugs, but I've tested it myself and it's working fine.**
+### [發布 (Releases)](https://github.com/murayuki/PalWorld-SettingTools/releases)
 
-#### [發布 (Releases)](https://github.com/murayuki/PalWorld-SettingTools/releases)
-
-# 功能特點 (Functionality)
+# 功能特點
 
 **A01: 如果是需要英文備註請將 `Remark_EN.json` 重新命名為 `Remark.json`
 	`Remark_EN.json` 翻譯來自 ChatGPT**
 
-​	**(If English comments are needed, please rename `Remark_EN.json` to `Remark.json`.
-​	`Remark_EN.json` translation is provided by ChatGPT.")**
+
 
 **A02: 程式中的語言為 `繁體中文` 如果需要英文請自行建構 `EXE執行文件`
 	 需要對 C# 有基本能力以及 Visual Studio 的基本操作 (開發使用 2022)**
 
-​     **(The language used in the program is `Traditional Chinese`. If you need English, please 	  	 construct the `EXE executable file` yourself. Basic proficiency in C# and familiarity with    	 basic operations in Visual Studio (developed using 2022) are required.)**
 
 
+* ### **GUI 直覺 編輯設定文件**
 
-* ##### GUI 直覺 編輯設定文件 (GUI Intuitive Edit Settings File)
-
-* **GUI 將變量備註** (GUI Remarks on variables)
+* ### **GUI 將變量備註**
 
 * ![img03](./Images/img03.png)
 
-* ### 圖片功能介紹 (Picture Functions)
+* ### 圖片功能介紹
 
-  - (1) **數值編輯框** 
-  
-  (Value editing box)
-  
-  - (2) **讀取文件 (請直接選擇 PalWorldSettings.ini 所在目錄即可自動獲取)**
-  
-  (Read the file (please directly select the directory where PalWorldSettings.ini can be automatically obtained))
-  
-  - (3) **已讀取文件狀態, 如果編輯錯誤可以直接重新讀取原數值**
-  
-  (Read the file status, if editing error, you can directly re-read the original value)
-  
-  - (4) **關閉文件 (不保存)**
-  
-  (Close the file (without saving))
-  
-  - (5) **保存文件並關閉文件**
-  
-  (Save the file and close it)
+  - ##### **(1) 數值編輯框**
 
+  - ##### **(2) 讀取文件 (請直接選擇 PalWorldSettings.ini 所在目錄即可自動獲取)**
 
+  - ##### **(3) 已讀取文件狀態, 如果編輯錯誤可以直接重新讀取原數值**
 
-# 圖片介紹 (Pictures)
+  - ##### **(4) 關閉文件 (不保存)**
+
+  - ##### **(5) 保存文件並關閉文件**
+
+  
+
+# 圖片介紹
 
 ![img01](./Images/img01.png)
 
@@ -65,13 +48,10 @@
 
 
 
-# 資料來源 (Source of information)
+# 資料來源
 
-**關於 Remark.json 文件中的備註資料下列**
+#### **關於 Remark.json 文件中的備註資料下列**
 
-##### **(Regarding the comment data in the Remark.json file, the following is available)**
+- [Palworld tech guide - Optimize game balance (palworldgame.com)](https://tech.palworldgame.com/optimize-game-balance)
 
-[Palworld tech guide - Optimize game balance (palworldgame.com)](https://tech.palworldgame.com/optimize-game-balance)
-
-[【討論】伺服器參數難度調整分享 @幻獸帕魯 哈啦板 - 巴哈姆特 (gamer.com.tw)](https://forum.gamer.com.tw/C.php?bsn=71458&snA=227)
-
+- [【討論】伺服器參數難度調整分享 @幻獸帕魯 哈啦板 - 巴哈姆特 (gamer.com.tw)](https://forum.gamer.com.tw/C.php?bsn=71458&snA=227)
