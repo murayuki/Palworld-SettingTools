@@ -1,0 +1,20 @@
+{
+	"UI_WINDOW_TITLE_TEXT": "Palworld 設定編輯",
+    "UI_LOAD_BUTTON_TEXT": "讀取文件",
+	"UI_RELOAD_BUTTON_TEXT": "重新讀取",
+	"UI_CLOSE_BUTTON_TEXT": "關閉文件",
+	"UI_SAVE_BUTTON_TEXT": "保存文件",
+	"UI_SELECT_FOLDER_TITLE_TEXT": "選擇設定文件所在目錄",
+	"UI_MESSAGE_ERROR_TITLE_TEXT": "錯誤",
+	"UI_MESSAGE_WARNING_TITLE_TEXT": "警告",
+	"UI_MESSAGE_OK_TITLE_TEXT": "成功",
+	
+	"UI_MESSAGE_SELECT_FOLDER_ERROR_TEXT": "錯誤目錄...\n\n1.選擇文件目錄 \n(範例: D:\\PalWorld Server\\Pal\\Saved\\Config\\WindowsServer)\n2.目錄中必須有 PalWorldSettings.ini 文件存在",
+	"UI_MESSAGE_RELOAD_TEXT": "重新讀取文件",
+	"UI_MESSAGE_SAVE_OK_TEXT": "文件保存成功!",
+	"UI_REMARK_MISSING_TEXT": "備註缺失",
+	
+	"UI_COLUMN_KEY_TITLE_TEXT": "變量",
+	"UI_COLUMN_VALUE_TITLE_TEXT": "值",
+	"UI_COLUMN_REMARK_TITLE_TEXT": "備註",
+}
