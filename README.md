@@ -2,11 +2,16 @@
 
 ------
 
-#### **為了讓自己方便修改設定所製作，可能有些代碼不太友好**
+### 為了讓自己方便修改設定所製作，可能有些代碼不太友好
 
 **Made to make it easier for you to modify the settings, some codes may not be very user friendly.**
 
+### 需要請自取, 當然我不能保證不會有錯誤, 目前自己測試是正常的
+
+**If you need it, please pick it up. Of course, I can't guarantee that there won't be any bugs, but I've tested it myself and it's working fine.**
+
 #### [發布 (Releases)](https://github.com/murayuki/PalWorld-SettingTools/releases)
+
 
 # 功能特點 (Functionality)
 
