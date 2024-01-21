@@ -1,4 +1,4 @@
-# Palworld Server Setting Editor
+# PalWorld Server Setting Editor
 
 ------
 
@@ -12,8 +12,20 @@
 
 #### [發布 (Releases)](https://github.com/murayuki/PalWorld-SettingTools/releases)
 
-
 # 功能特點 (Functionality)
+
+**A01: 如果是需要英文備註請將 `Remark_EN.json` 重新命名為 `Remark.json`
+	`Remark_EN.json` 翻譯來自 ChatGPT**
+
+​	**(If English comments are needed, please rename `Remark_EN.json` to `Remark.json`.
+​	`Remark_EN.json` translation is provided by ChatGPT.")**
+
+**A02: 程式中的語言為 `繁體中文` 如果需要英文請自行建構 `EXE執行文件`
+	 需要對 C# 有基本能力以及 Visual Studio 的基本操作 (開發使用 2022)**
+
+​     **(The language used in the program is `Traditional Chinese`. If you need English, please 	  	 construct the `EXE executable file` yourself. Basic proficiency in C# and familiarity with    	 basic operations in Visual Studio (developed using 2022) are required.)**
+
+
 
 * ##### GUI 直覺 編輯設定文件 (GUI Intuitive Edit Settings File)
 
@@ -23,16 +35,25 @@
 
 * ### 圖片功能介紹 (Picture Functions)
 
-  1. **數值編輯框** 
-     (Value editing box)
-  2. **讀取文件 (請直接選擇 PalWorldSettings.ini 所在目錄即可自動獲取)**
-     (Read the file (please directly select the directory where PalWorldSettings.ini can be automatically obtained))
-  3. **已讀取文件狀態, 如果編輯錯誤可以直接重新讀取原數值**
-     (Read the file status, if editing error, you can directly re-read the original value)
-  4. **關閉文件 (不保存)**
-     (Close the file (without saving))
-  5. **保存文件並關閉文件**
-     (Save the file and close it)
+  - (1) **數值編輯框** 
+  
+  (Value editing box)
+  
+  - (2) **讀取文件 (請直接選擇 PalWorldSettings.ini 所在目錄即可自動獲取)**
+  
+  (Read the file (please directly select the directory where PalWorldSettings.ini can be automatically obtained))
+  
+  - (3) **已讀取文件狀態, 如果編輯錯誤可以直接重新讀取原數值**
+  
+  (Read the file status, if editing error, you can directly re-read the original value)
+  
+  - (4) **關閉文件 (不保存)**
+  
+  (Close the file (without saving))
+  
+  - (5) **保存文件並關閉文件**
+  
+  (Save the file and close it)
 
 
 
