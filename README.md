@@ -6,7 +6,7 @@
 
 **Made to make it easier for you to modify the settings, some codes may not be very user friendly.**
 
-
+#### [發布 (Releases)](https://github.com/murayuki/PalWorld-SettingTools/releases)
 
 # 功能特點 (Functionality)
 
