@@ -10,7 +10,7 @@
     "bEnableAimAssistKeyboard": "預設：False\n鍵鼠輔助瞄準 (True/False)",
     "bEnableAimAssistPad": "預設：False\n手把輔助瞄準 (True/False)",
     "bEnableDefenseOtherGuildPlayer": "預設: False\n是否受到其他公會傷害 (True/False)",
-    "bEnableFastTravel": "預設：True\是否開啟快速旅行 (True/False)",
+    "bEnableFastTravel": "預設：True\n是否開啟快速旅行 (True/False)",
     "bEnableFriendlyFire": "預設: False\n玩家對自己帕魯跟同公會玩家的傷害 (True/False)",
     "bEnableInvaderEnemy": "預設: True\n襲擊事件關閉開啟 (True/False)",
     "bEnableNonLoginPenalty": "預設：False\n登入懲罰 (True/False) [未知作用]",
