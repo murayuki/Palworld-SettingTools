@@ -8,13 +8,13 @@
 
 ### [發布 (Releases)](https://github.com/murayuki/PalWorld-SettingTools/releases)
 
-# 功能特點
+# 注意事項
+
+> 所有帶有 `_EN` 的 `json`  翻譯都來自 `ChatGPT`
 
 - **A01:**
   
   - **如果是需要英文備註請將 `Remark_EN.json` 重新命名為 `Remark.json`**
-  
-  - `Remark_EN.json` 翻譯來自 ``ChatGPT``
 
 - **A02:**
   
@@ -25,7 +25,10 @@
   - **請自行選擇語言文件 `I18n.json`/`I18n_EN.json`**
   
   - **如果沒有請自行翻譯只要檔案名稱是 `I18n.json` 即可**
-* ### **GUI 直覺 編輯設定文件**
+
+# 功能特點
+
+* **GUI 直覺 編輯設定文件**
 
 * ### **GUI 將變量備註**
 
@@ -56,3 +59,6 @@
 - [Palworld tech guide - Optimize game balance (palworldgame.com)](https://tech.palworldgame.com/optimize-game-balance)
 
 - [【討論】伺服器參數難度調整分享 @幻獸帕魯 哈啦板 - 巴哈姆特 (gamer.com.tw)](https://forum.gamer.com.tw/C.php?bsn=71458&snA=227)
+  
+  - **特別感謝 [DANIEL6505](https://home.gamer.com.tw/daniel6505) 巴哈版網友的分享`整理`和`測試`
+    PS: 如果想知道更加詳細的說明可以參考這篇文章**
