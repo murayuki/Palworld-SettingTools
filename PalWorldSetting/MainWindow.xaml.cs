@@ -6,10 +6,8 @@ using System.Text.RegularExpressions;
 using System.Windows;
 using PalWorldSetting.lib;
 using FolderSelect;
-using SimpleJSON;
 using System.Linq;
 using System.Windows.Controls;
-using System.Diagnostics;
 
 namespace PalWorldSetting
 {
@@ -18,26 +16,19 @@ namespace PalWorldSetting
     /// </summary>
     public partial class MainWindow : Window
     {
-
-        public string ConfigPath = "none";
-        public ObservableCollection<Config> ConfigData { get; set; }
-        public Dictionary<string, string> OriginalConfig;
-
-        private string DataGridColumnKey;
-        private string DataGridColumnVal;
-        private string DataGridColumnRemark;
-
+        private string ConfigPath = "none";
+        private ObservableCollection<Config> ConfigData { get; set; }
+        private Dictionary<string, string> OriginalConfig;
 
         public MainWindow()
         {
+            InitializeComponent();
+
             ConfigData = new ObservableCollection<Config>();
             OriginalConfig = new Dictionary<string, string>();
-          
-            InitializeComponent();
             ZClan.Init();
             ZData.LoadI18nFile();
             InitI18nFromUI();
-
             ZData.LoadRemarkFile();
         }
 
@@ -53,8 +44,7 @@ namespace PalWorldSetting
             string[] colHeaders = { "Key", "Value", "Remark" };
             foreach (string colTitle in colHeaders)
             {
-                DataGridTextColumn dataGridColumn = dataGrid.Columns.Single(c => c.Header.ToString() == colTitle) as DataGridTextColumn;
-                if (dataGridColumn != null)
+                if (dataGrid.Columns.Single(c => c.Header.ToString() == colTitle) is DataGridTextColumn dataGridColumn)
                 {
                     dataGridColumn.Header = (string)ZData.I18n[$"UI_COLUMN_{colTitle.ToUpper()}_TITLE_TEXT"];
                 }
@@ -94,7 +84,7 @@ namespace PalWorldSetting
             try
             {
                 string optionSettingsLine = ZData.ReadOptionSettingsLine(path);
-                var matches = Regex.Matches(optionSettingsLine, @"(\w+)=(\""[^\""]*\""|\d+\.\d+|\w+),?");
+                MatchCollection matches = Regex.Matches(optionSettingsLine, @"(\w+)=(\""[^\""]*\""|\d+\.\d+|\w+),?");
                 foreach (Match match in matches)
                 {
                     if (!match.Success) { continue; }
@@ -125,6 +115,7 @@ namespace PalWorldSetting
 
             if (LoadFound)
             {
+                this.Title = $"{(string)ZData.I18n["UI_WINDOW_TITLE_TEXT"]} : {path}";
                 dataGrid.ItemsSource = ConfigData;
                 LoadFile.IsEnabled = false;
                 ReLoad.IsEnabled = true;
@@ -205,6 +196,7 @@ namespace PalWorldSetting
         #region Close File
         private void ClearStatus()
         {
+            this.Title = (string)ZData.I18n["UI_WINDOW_TITLE_TEXT"];
             dataGrid.ItemsSource = "";
             LoadFile.IsEnabled = true;
             CloseFile.IsEnabled = false;

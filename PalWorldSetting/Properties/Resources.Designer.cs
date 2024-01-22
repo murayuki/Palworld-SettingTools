@@ -63,9 +63,9 @@ namespace PalWorldSetting.Properties {
         /// <summary>
         ///   查詢類似 (圖示) 的類型 System.Drawing.Icon 當地語系化資源。
         /// </summary>
-        internal static System.Drawing.Icon PalWorld {
+        internal static System.Drawing.Icon Palworld {
             get {
-                object obj = ResourceManager.GetObject("PalWorld", resourceCulture);
+                object obj = ResourceManager.GetObject("Palworld", resourceCulture);
                 return ((System.Drawing.Icon)(obj));
             }
         }

@@ -7,12 +7,12 @@ using System.Windows;
 // 組件的一般資訊是由下列的屬性集控制。
 // 變更這些屬性的值即可修改組件的相關
 // 資訊。
-[assembly: AssemblyTitle("PalWorldSetting Tool")]
-[assembly: AssemblyDescription("PalWorld Server Setting Editor (Release 2024/01/22)")]
+[assembly: AssemblyTitle("Palworld Server Setting Editor")]
+[assembly: AssemblyDescription("Palworld Server Setting Editor")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PalWorldSetting Tool")]
-[assembly: AssemblyCopyright("Make By Rz")]
+[assembly: AssemblyProduct("Palworld Server Setting Editor (Revision v2)")]
+[assembly: AssemblyCopyright("Make By Rz (Release 2024/01/22)")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -51,5 +51,5 @@ using System.Windows;
 // 您可以指定所有的值，也可以使用 '*' 將組建和修訂編號
 // 設為預設，如下所示:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.0.0.0")]
-[assembly: AssemblyFileVersion("2.0.0.0")]
+[assembly: AssemblyVersion("2.0.0.1")]
+[assembly: AssemblyFileVersion("2.0.0.1")]
