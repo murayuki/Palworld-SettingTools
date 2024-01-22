@@ -62,3 +62,13 @@
   
   - **特別感謝 [DANIEL6505](https://home.gamer.com.tw/daniel6505) 巴哈版網友的分享`整理`和`測試`
     PS: 如果想知道更加詳細的說明可以參考這篇文章**
+
+# 依賴
+
+- 所使用依賴來自網路開源資源, 如果需要請自行尋找這邊只列出我還記得的來源出處的
+
+- 當然對於無法列出處的依賴感到非常抱歉
+  
+  - [Bunny83/SimpleJSON: A simple JSON parser in C# (github.com)](https://github.com/Bunny83/SimpleJSON)
+
+> ##### LICENSE `GPL-3.0 license`
