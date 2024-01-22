@@ -22,7 +22,7 @@
 
 # Features
 
-* **Intuitively edit configuration files using a GUI.**
+* ### **Intuitively edit configuration files using a GUI.**
 
 * ### **GUI includes variable remarks.**
 
