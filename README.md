@@ -28,23 +28,25 @@
 
 # 功能特點
 
-* ### **GUI 直覺 編輯設定文件**
+* ##### **直接讀取 `PalWorldSettings.ini` 進行編輯**
 
-* ### **GUI 將變量備註**
+* ##### **排序化 `PalWorldSettings.ini` 文件中變量**
 
-* ![img03](./Images/img03.png)
+* ##### **將變量標註備註說明**
+  
+  ![./Images/img03.png](./Images/img03.png)
 
-* ### 圖片功能介紹
+* ##### 圖片功能介紹
   
-  - ##### **(1) 數值編輯框**
+  - **(1) 數值編輯框**
   
-  - ##### **(2) 讀取文件 (請直接選擇 `PalWorldSettings.ini` 所在目錄即可自動獲取)**
+  - **(2) 讀取文件 (請直接選擇 `PalWorldSettings.ini` 所在目錄即可自動獲取)**
   
-  - ##### **(3) 已讀取文件狀態, 如果編輯錯誤可以直接重新讀取原數值**
+  - **(3) 已讀取文件狀態, 如果編輯錯誤可以直接重新讀取原數值**
   
-  - ##### **(4) 關閉文件 (不保存)**
+  - **(4) 關閉文件 (不保存)**
   
-  - ##### **(5) 保存文件並關閉文件**
+  - **(5) 保存文件並關閉文件**
 
 # 圖片介紹
 
@@ -60,15 +62,17 @@
 
 - [【討論】伺服器參數難度調整分享 @幻獸帕魯 哈啦板 - 巴哈姆特 (gamer.com.tw)](https://forum.gamer.com.tw/C.php?bsn=71458&snA=227)
   
-  - **特別感謝 [DANIEL6505](https://home.gamer.com.tw/daniel6505) 巴哈版網友的分享`整理`和`測試`
-    PS: 如果想知道更加詳細的說明可以參考這篇文章**
+  - **特別感謝 [DANIEL6505](https://home.gamer.com.tw/daniel6505) 巴哈版網友的分享`整理`和`測試`**
 
-# 依賴
+- [【情報】伺服器參數表 (附單機模式對照) @幻獸帕魯 哈啦板 - 巴哈姆特 (gamer.com.tw)](https://forum.gamer.com.tw/C.php?bsn=71458&snA=466)
+  
+  - **特別感謝 [jorden2895](https://home.gamer.com.tw/jorden2895) 巴哈版網友的分享 `遊戲內翻譯整理`**
+  - **這位網友所提供的 [Google 試算表](https://docs.google.com/spreadsheets/d/e/2PACX-1vS6HbRTq53vrPTi0Yp1XPR9dzWI_0bvVcpjudvooXapY81IZO77pp4O24wA9h_NLFFXue-XewIJWn0J/pubhtml)**
 
 - 所使用依賴來自網路開源資源, 如果需要請自行尋找這邊只列出我還記得的來源出處的
-
-- 當然對於無法列出處的依賴感到非常抱歉
   
   - [Bunny83/SimpleJSON: A simple JSON parser in C# (github.com)](https://github.com/Bunny83/SimpleJSON)
+  
+  - **<u>當然對於無法列出處的依賴感到非常抱歉</u>**
 
 > ##### LICENSE `GPL-3.0 license`
