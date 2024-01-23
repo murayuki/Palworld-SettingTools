@@ -28,9 +28,11 @@
 
 # 功能特點
 
-* ##### **直接讀取 `PalWorldSettings.ini` 進行編輯**
+* ##### **介面化修改變量數值**
 
-* ##### **排序化 `PalWorldSettings.ini` 文件中變量**
+* ##### **讀取 `PalWorldSettings.ini` 文件進行編輯**
+
+* ##### **介面排序 `PalWorldSettings.ini` 文件中變量**
 
 * ##### **將變量標註備註說明**
   
@@ -64,12 +66,7 @@
   
   - **特別感謝 [DANIEL6505](https://home.gamer.com.tw/daniel6505) 巴哈版網友的分享`整理`和`測試`**
 
-- [【情報】伺服器參數表 (附單機模式對照) @幻獸帕魯 哈啦板 - 巴哈姆特 (gamer.com.tw)](https://forum.gamer.com.tw/C.php?bsn=71458&snA=466)
-  
-  - **特別感謝 [jorden2895](https://home.gamer.com.tw/jorden2895) 巴哈版網友的分享 `遊戲內翻譯整理`**
-  - **這位網友所提供的 [Google 試算表](https://docs.google.com/spreadsheets/d/e/2PACX-1vS6HbRTq53vrPTi0Yp1XPR9dzWI_0bvVcpjudvooXapY81IZO77pp4O24wA9h_NLFFXue-XewIJWn0J/pubhtml)**
-
-- 所使用依賴來自網路開源資源, 如果需要請自行尋找這邊只列出我還記得的來源出處的
+- **所使用依賴來自網路開源資源, 如果需要請自行尋找這邊只列出我還記得的來源出處的**
   
   - [Bunny83/SimpleJSON: A simple JSON parser in C# (github.com)](https://github.com/Bunny83/SimpleJSON)
   
