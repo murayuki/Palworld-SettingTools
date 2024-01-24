@@ -302,7 +302,7 @@ namespace PalWorldSetting.lib
                   
                         foreach (var option in Options)
                         {
-                            if (option.Key.ToLower() == PValue)
+                            if (option.Key.ToLower() == PValue.ToLower())
                             {
                                 PValue = option.Key;
                             }
