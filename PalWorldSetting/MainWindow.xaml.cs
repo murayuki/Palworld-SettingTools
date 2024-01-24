@@ -8,6 +8,8 @@ using PalWorldSetting.lib;
 using FolderSelect;
 using System.Linq;
 using System.Windows.Controls;
+using System.Diagnostics;
+using PalWorldSetting.Properties;
 
 namespace PalWorldSetting
 {
@@ -23,13 +25,22 @@ namespace PalWorldSetting
         public MainWindow()
         {
             InitializeComponent();
-
             ConfigData = new ObservableCollection<Config>();
             OriginalConfig = new Dictionary<string, string>();
-            ZClan.Init();
+            ZData.InitSetting();
+            CheckRecordButton();
             ZData.LoadI18nFile();
             InitI18nFromUI();
-            ZData.LoadRemarkFile();
+            ZData.LoadDataFile();
+        }
+
+        public void CheckRecordButton()
+        {
+            string RecordPath = ZData.Setting.Read("OpenRecord", "Setting");
+            if (File.Exists(RecordPath))
+            {
+                LoadRecordFile.IsEnabled = true;
+            }
         }
 
         #region UI SET I18n
@@ -40,8 +51,9 @@ namespace PalWorldSetting
             ReLoad.Content = (string)ZData.I18n["UI_RELOAD_BUTTON_TEXT"];
             CloseFile.Content = (string)ZData.I18n["UI_CLOSE_BUTTON_TEXT"];
             SaveFile.Content = (string)ZData.I18n["UI_SAVE_BUTTON_TEXT"];
+            LoadRecordFile.Content = (string)ZData.I18n["UI_LOAD_RECORD_BUTTON_TEXT"];
 
-            string[] colHeaders = { "Key", "Value", "Remark" };
+            string[] colHeaders = { "Key", "Value", "Default_Limit", "Remark" };
             foreach (string colTitle in colHeaders)
             {
                 if (dataGrid.Columns.Single(c => c.Header.ToString() == colTitle) is DataGridTextColumn dataGridColumn)
@@ -93,16 +105,17 @@ namespace PalWorldSetting
                     string value = match.Groups[2].Value.Trim();
                     value = value.Replace("\"", ""); // Replace "
 
-                    string Remark = (!ZData.Remarks[key]) ? (string)ZData.I18n["UI_REMARK_MISSING_TEXT"] : (string)ZData.Remarks[key];
-
                     OriginalConfig.Add(key, value);
                     ConfigData.Add(new Config()
                     {
                         CKey = key,
                         CValue = value,
-                        CRemark = Remark
+                        CRemark = ZData.Remarks(key),
+                        CValueNote = $"{ZData.Default(key)} {ZData.Limit(key)}",
+                        CDefault = ZData.Default(key),
+                        CReayEnabled = ZData.IsEnabled(key),
+                        CType = ZData.Type(key),
                     });
-
                     // Debug
                     //Trace.WriteLine($"{key}: {value}");
                 }
@@ -118,10 +131,24 @@ namespace PalWorldSetting
                 this.Title = $"{(string)ZData.I18n["UI_WINDOW_TITLE_TEXT"]} : {path}";
                 dataGrid.ItemsSource = ConfigData;
                 LoadFile.IsEnabled = false;
+                LoadRecordFile.IsEnabled = false;
                 ReLoad.IsEnabled = true;
                 CloseFile.IsEnabled = true;
                 SaveFile.IsEnabled = true;
                 dataGrid.IsEnabled = true;
+                ZData.Setting.Write("OpenRecord", path, "Setting");
+            }
+
+        }
+        #endregion
+
+        #region Load Record File
+        private void LoadRecordFile_Click(object sender, RoutedEventArgs e)
+        {
+            string RecordPath = ZData.Setting.Read("OpenRecord", "Setting");
+            if (File.Exists(RecordPath))
+            {
+                LoadData(RecordPath);
             }
         }
         #endregion
@@ -158,8 +185,8 @@ namespace PalWorldSetting
                     {
                         OriginalConfig[cfg.CKey] = cfg.CValue;
 
-                        string val = ZClan.CheckType(cfg.CKey, cfg.CValue);
-
+                        string val = ZData.SaveFormat(cfg.CKey, cfg.CValue);
+                        Trace.WriteLine(val);
                         CofnigString += $"{val},";
                     }
                 }
@@ -176,8 +203,6 @@ namespace PalWorldSetting
                     }
                 }
                 File.WriteAllLines(ConfigPath, lines);
-
-       
             }
             catch (Exception ex)
             {
@@ -188,6 +213,7 @@ namespace PalWorldSetting
             if (Found) { 
                 MessageBox.Show((string)ZData.I18n["UI_MESSAGE_SAVE_OK_TEXT"], (string)ZData.I18n["UI_MESSAGE_OK_TITLE_TEXT"], MessageBoxButton.OK, MessageBoxImage.Information);
                 ClearStatus();
+                CheckRecordButton();
                 ConfigPath = "none";
             }
         }
@@ -210,8 +236,10 @@ namespace PalWorldSetting
         private void CloseFile_Click(object sender, RoutedEventArgs e)
         {
             ClearStatus();
+            CheckRecordButton();
             ConfigPath = "none";
         }
         #endregion
+
     }
 }

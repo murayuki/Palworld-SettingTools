@@ -85,8 +85,8 @@
     </Compile>
     <Compile Include="lib\Data.cs" />
     <Compile Include="lib\FolderSelectDialog.cs" />
+    <Compile Include="lib\InIConfig.cs" />
     <Compile Include="lib\Reflector.cs" />
-    <Compile Include="lib\Clan.cs" />
     <Compile Include="lib\SimpleJSON.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

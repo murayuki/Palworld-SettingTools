@@ -11,8 +11,8 @@ using System.Windows;
 [assembly: AssemblyDescription("Palworld Server Setting Editor")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Palworld Server Setting Editor (Revision v2)")]
-[assembly: AssemblyCopyright("Make By Rz (Release 2024/01/22)")]
+[assembly: AssemblyProduct("Palworld Server Setting Editor (Revision)")]
+[assembly: AssemblyCopyright("Make By Rz (Release 2024/01/24)")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -51,5 +51,5 @@ using System.Windows;
 // 您可以指定所有的值，也可以使用 '*' 將組建和修訂編號
 // 設為預設，如下所示:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2.0.0.1")]
-[assembly: AssemblyFileVersion("2.0.0.1")]
+[assembly: AssemblyVersion("2.0.0.2")]
+[assembly: AssemblyFileVersion("2.0.0.2")]
