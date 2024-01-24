@@ -82,7 +82,7 @@
         "MinVal": 0.1,
         "MaxVal": 9999
     },
-    "PlayerStomachDecreaseRate": {
+    "PlayerStomachDecreaceRate": {
         "Type": "Double",
         "Remark": "Player satiety decrease multiplier\nNote: The lower the number, the slower the decrease, meaning less hunger.",
         "Default": 1,
@@ -90,7 +90,7 @@
         "MinVal": 0.1,
         "MaxVal": 5
     },
-    "PlayerStaminaDecreaseRate": {
+    "PlayerStaminaDecreaceRate": {
         "Type": "Double",
         "Remark": "Player stamina decrease multiplier\nNote: The lower the number, the slower the decrease, indicating more stamina.\nPlayer stamina affects the number of times they can gather, move, and roll in combat.",
         "Default": 1,
@@ -98,7 +98,7 @@
         "MinVal": 0.1,
         "MaxVal": 5
     },
-    "PlayerAutoHPRegenRate": {
+    "PlayerAutoHPRegeneRate": {
         "Type": "Double",
         "Remark": "Player automatic health regeneration multiplier",
         "Default": 1,
@@ -106,7 +106,7 @@
         "MinVal": 0.1,
         "MaxVal": 9999
     },
-    "PlayerAutoHpRegenRateInSleep": {
+    "PlayerAutoHpRegeneRateInSleep": {
         "Type": "Double",
         "Remark": "Player health regeneration multiplier during sleep",
         "Default": 1,
@@ -114,7 +114,7 @@
         "MinVal": 0.1,
         "MaxVal": 9999
     },
-    "PalStomachDecreaseRate": {
+    "PalStomachDecreaceRate": {
         "Type": "Double",
         "Remark": "Pal satiety decrease multiplier\nNote: The lower the number, the slower the decrease, meaning less hunger.",
         "Default": 1,
@@ -122,7 +122,7 @@
         "MinVal": 0.1,
         "MaxVal": 5
     },
-    "PalStaminaDecreaseRate": {
+    "PalStaminaDecreaceRate": {
         "Type": "Double",
         "Remark": "Pal stamina decrease multiplier\nNote: The lower the number, the slower the decrease, indicating more stamina.\nPal stamina affects large world movement and skill casting frequency.",
         "Default": 1,
@@ -130,7 +130,7 @@
         "MinVal": 0.1,
         "MaxVal": 5
     },
-    "PalAutoHPRegenRate": {
+    "PalAutoHPRegeneRate": {
         "Type": "Double",
         "Remark": "Pal automatic health regeneration multiplier",
         "Default": 1,
@@ -138,7 +138,7 @@
         "MinVal": 0.1,
         "MaxVal": 9999
     },
-    "PalAutoHpRegenRateInSleep": {
+    "PalAutoHpRegeneRateInSleep": {
         "Type": "Double",
         "Remark": "Pal health regeneration multiplier during sleep\nNote: Health regeneration rate in Pal Terminal.",
         "Default": 1,
