@@ -1,0 +1,26 @@
+{
+	"UI_WINDOW_TITLE_TEXT": "Palworld Configuration Editor",
+	
+	"UI_LOAD_RECORD_BUTTON_TEXT": "Open Old File",
+	"UI_LOAD_BUTTON_TEXT": "Load File",
+	"UI_RELOAD_BUTTON_TEXT": "Reload",
+	"UI_CLOSE_BUTTON_TEXT": "Close File",
+	"UI_SAVE_BUTTON_TEXT": "Save File",
+	"UI_SELECT_FOLDER_TITLE_TEXT": "Select Directory of Configuration File",
+	"UI_MESSAGE_ERROR_TITLE_TEXT": "Error",
+	"UI_MESSAGE_WARNING_TITLE_TEXT": "Warning",
+	"UI_MESSAGE_OK_TITLE_TEXT": "Success",
+	
+	"UI_MESSAGE_AVAILABLE_OPTIONS_TEXT": "Available values: {Options}",
+	"UI_MESSAGE_AVAILABLE_LIMIT_TEXT": "Valid values: {Value}",
+	"UI_MESSAGE_DATE_MISSING_TEXT": "The data.json file is missing. Please check the file integrity.\n\nAfter confirming, the program will close.",
+	"UI_MESSAGE_SELECT_FOLDER_ERROR_TEXT": "Incorrect directory...\n\n1. Choose the file directory\n(Example: D:\\PalWorld Server\\Pal\\Saved\\Config\\WindowsServer)\n2. The directory must contain the PalWorldSettings.ini file.",
+	"UI_MESSAGE_RELOAD_TEXT": "Reload the file",
+	"UI_MESSAGE_SAVE_OK_TEXT": "File saved successfully!",
+	"UI_REMARK_MISSING_TEXT": "Remark missing",
+	
+	"UI_COLUMN_KEY_TITLE_TEXT": "Variable",
+	"UI_COLUMN_VALUE_TITLE_TEXT": "Value (Editable)",
+	"UI_COLUMN_DEFAULT_LIMIT_TITLE_TEXT": "Default Value (Limit)",
+	"UI_COLUMN_REMARK_TITLE_TEXT": "Remark"
+}

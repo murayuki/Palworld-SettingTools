@@ -1,0 +1,443 @@
+{
+    "Difficulty": {
+        "Type": "Option",
+        "Remark": "遊戲難度\nPS：即使使用Difficult或是Easy也不影響其他調整的參數",
+        "Default": "None",
+        "IsEnabled": true,
+        "Options": {
+            "None": "無",
+            "Easy": "簡單",
+            "Difficult": "困難"
+        }
+    },
+    "DayTimeSpeedRate": {
+        "Type": "Double",
+        "Remark": "白天流逝速度\nPS：預設參數白天晚上各30分鐘。若增加數字則流逝更快，白天或晚上會更短\n野外BOSS體感重生時間是30分鐘，如果把數字增加，BOSS重生會更快",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 5
+    },
+    "NightTimeSpeedRate": {
+        "Type": "Double",
+        "Remark": "夜晚流逝速度\nPS：預設參數白天晚上各30分鐘。若增加數字則流逝更快，白天或晚上會更短\n野外BOSS體感重生時間是30分鐘，如果把數字增加，BOSS重生會更快",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 5
+    },
+    "ExpRate": {
+        "Type": "Double",
+        "Remark": "經驗值倍率",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 9999
+    },
+    "PalCaptureRate": {
+        "Type": "Double",
+        "Remark": "捕獲機率倍率\nPS：參數調整非常敏感請謹慎調整。困難模式為0.8，簡單模式為2",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.5,
+        "MaxVal": 2
+    },
+    "PalSpawnNumRate": {
+        "Type": "Double",
+        "Remark": "帕魯出現數量倍率\nPS：預設參數 Boss固定1隻，野生帕魯群1~2隻\n若調整為2，Boss固定變2隻，野生帕魯群2~4隻\n超過3會經常導致帕魯重疊或掉出地圖，請謹慎調整",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.5,
+        "MaxVal": 9999
+    },
+    "PalDamageRateAttack": {
+        "Type": "Double",
+        "Remark": "帕魯攻擊傷害倍率\nPS：數字越高帕魯越強。包含自己和野生的帕魯",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 9999
+    },
+    "PalDamageRateDefense": {
+        "Type": "Double",
+        "Remark": "帕魯承受傷害倍率\nPS：數字越低帕魯越硬。包含自己和野生的帕魯",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 9999
+    },
+    "PlayerDamageRateAttack": {
+        "Type": "Double",
+        "Remark": "玩家攻擊傷害倍率\nPS：數字越高玩家越強",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 9999
+    },
+    "PlayerDamageRateDefense": {
+        "Type": "Double",
+        "Remark": "玩家承受傷害倍率\nPS：數字越低玩家越硬",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 9999
+    },
+    "PlayerStomachDecreaceRate": {
+        "Type": "Double",
+        "Remark": "玩家飽食度降低倍率\nPS：數字越低下降越慢，越不容易空腹的意思",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 5
+    },
+    "PlayerStaminaDecreaceRate": {
+        "Type": "Double",
+        "Remark": "玩家耐力降低倍率\nPS：數字越低下降越慢，耐力越多的意思\n玩家耐力會影響採集、移動和戰鬥翻滾的次數",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 5
+    },
+    "PlayerAutoHPRegeneRate": {
+        "Type": "Double",
+        "Remark": "玩家生命值自然回復倍率",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 9999
+    },
+    "PlayerAutoHpRegeneRateInSleep": {
+        "Type": "Double",
+        "Remark": "玩家睡眠時生命值回復倍率",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 9999
+    },
+    "PalStomachDecreaceRate": {
+        "Type": "Double",
+        "Remark": "帕魯飽食度降低倍率\nPS：數字越低下降越慢，越不容易空腹的意思",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 5
+    },
+    "PalStaminaDecreaceRate": {
+        "Type": "Double",
+        "Remark": "帕魯耐力降低倍率\nPS：數字越低下降越慢，耐力越多的意思\n帕魯耐力會影響大世界移動、技能施放次數",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 5
+    },
+    "PalAutoHPRegeneRate": {
+        "Type": "Double",
+        "Remark": "帕魯生命值自然回復倍率",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 9999
+    },
+    "PalAutoHpRegeneRateInSleep": {
+        "Type": "Double",
+        "Remark": "帕魯睡眠時生命值回復倍率\nPS：帕魯終端中的生命值回復倍率",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 9999
+    },
+    "BuildObjectDamageRate": {
+        "Type": "Double",
+        "Remark": "對建築傷害倍率",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.5,
+        "MaxVal": 3
+    },
+    "BuildObjectDeteriorationDamageRate": {
+        "Type": "Double",
+        "Remark": "建築物的劣化速度倍率\nPS：越高劣化越快",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0,
+        "MaxVal": 10
+    },
+    "CollectionDropRate": {
+        "Type": "Double",
+        "Remark": "道具採集量倍率\nPS：拿石稿敲小帕魯礦取得1個帕魯碎片預設要6下平均19點傷害，若調為3則要敲2下平均19點傷害",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.5,
+        "MaxVal": 9999
+    },
+    "CollectionObjectHpRate": {
+        "Type": "Double",
+        "Remark": "可採集物品生命值倍率",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.5,
+        "MaxVal": 3
+    },
+    "CollectionObjectRespawnSpeedRate": {
+        "Type": "Double",
+        "Remark": "可採集物品刷新間隔\nPS：預設參數樹木大礦石為1h重生，若為0立即重生 (如果發現固定點的礦不重生了，建議重啟伺服器確認看看)",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0,
+        "MaxVal": 3
+    },
+    "EnemyDropItemRate": {
+        "Type": "Double",
+        "Remark": "道具掉落量倍率\nPS：經測試沒有上限",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.5,
+        "MaxVal": 9999
+    },
+    "DeathPenalty": {
+        "Type": "Option",
+        "Remark": "死亡懲罰",
+        "Default": "All",
+        "IsEnabled": true,
+        "Options": {
+            "ItemAndEquipment": "掉落所有道具",
+            "Item": "掉落裝備以外的道具 (不含帕魯及身上穿的裝備武器)",
+            "All": "掉落所有道具及隊伍內帕魯 (不包含無法掉落的帕魯專屬裝備，如馬鞍)",
+            "None": "不掉落任何東西"
+        }
+    },
+    "bEnablePlayerToPlayerDamage": {
+        "Type": "Bool",
+        "Remark": "【PVP】啟用玩家間傷害",
+        "Default": false,
+        "IsEnabled": true
+    },
+    "bEnableFriendlyFire": {
+        "Type": "Bool",
+        "Remark": "【PVP】啟用友軍火力",
+        "Default": false,
+        "IsEnabled": true
+    },
+    "bEnableInvaderEnemy": {
+        "Type": "Bool",
+        "Remark": "是否會發生襲擊事件?",
+        "Default": true,
+        "IsEnabled": true
+    },
+    "bActiveUNKO": {
+        "Type": "Bool",
+        "Remark": "啟用大便(UNKO)",
+        "Default": false,
+        "IsEnabled": true
+    },
+    "bEnableAimAssistPad": {
+        "Type": "Bool",
+        "Remark": "啟用手把輔助瞄準",
+        "Default": true,
+        "IsEnabled": true
+    },
+    "bEnableAimAssistKeyboard": {
+        "Type": "Bool",
+        "Remark": "啟用鍵鼠輔助瞄準",
+        "Default": false,
+        "IsEnabled": true
+    },
+    "DropItemMaxNum": {
+        "Type": "Int",
+        "Remark": "世界內的掉落物上限\nPS：建議 300~500",
+        "Default": 3000,
+        "IsEnabled": true,
+        "MinVal": 0,
+        "MaxVal": 5000
+    },
+    "DropItemMaxNum_UNKO": {
+        "Type": "Int",
+        "Remark": "世界內的大便(UNKO)掉落物上限",
+        "Default": 100,
+        "IsEnabled": true,
+        "MinVal": 0,
+        "MaxVal": 5000
+    },
+    "BaseCampMaxNum": {
+        "Type": "Int",
+        "Remark": "基地最大座數",
+        "Default": 128,
+        "IsEnabled": true
+    },
+    "BaseCampWorkerMaxNum": {
+        "Type": "Int",
+        "Remark": "據點工作帕魯數量上限\nPS：數字超過15目前不生效\n似乎將存檔放到單人進行修改數量上限20",
+        "Default": 15,
+        "IsEnabled": true,
+        "MinVal": 1,
+        "MaxVal": 20
+    },
+    "DropItemAliveMaxHours": {
+        "Type": "Double",
+        "Remark": "掉落物品留存時間(小時)\nPS：建議 0.5 以保證掉落物不會太多造成卡頓",
+        "Default": 1,
+        "IsEnabled": true
+    },
+    "bAutoResetGuildNoOnlinePlayers": {
+        "Type": "Bool",
+        "Remark": "啟用自動清理公會成員",
+        "Default": false,
+        "IsEnabled": true
+    },
+    "AutoResetGuildTimeNoOnlinePlayers": {
+        "Type": "Double",
+        "Remark": "自動清理公會成員(小時)",
+        "Default": 72,
+        "IsEnabled": true
+    },
+    "GuildPlayerMaxNum": {
+        "Type": "Int",
+        "Remark": "公會人數上限",
+        "Default": 20,
+        "IsEnabled": true,
+        "MinVal": 1,
+        "MaxVal": 100
+    },
+    "PalEggDefaultHatchingTime": {
+        "Type": "Double",
+        "Remark": "巨大蛋孵化所需時間(小時)\nPS：其他蛋也會相應改變孵化時間",
+        "Default": 72,
+        "IsEnabled": true,
+        "MinVal": 0,
+        "MaxVal": 240
+    },
+    "WorkSpeedRate": {
+        "Type": "Double",
+        "Remark": "工作速度倍率\nPS：不建議大於 5",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 5
+    },
+    "bIsMultiplay": {
+        "Type": "Bool",
+        "Remark": "啟用多人遊戲",
+        "Default": false,
+        "IsEnabled": true
+    },
+    "bIsPvP": {
+        "Type": "Bool",
+        "Remark": "【PVP】啟用 PvP",
+        "Default": false,
+        "IsEnabled": true
+    },
+    "bCanPickupOtherGuildDeathPenaltyDrop": {
+        "Type": "Bool",
+        "Remark": "【PVP】允許拾取其他公會死亡掉落物",
+        "Default": false,
+        "IsEnabled": true
+    },
+    "bEnableNonLoginPenalty": {
+        "Type": "Bool",
+        "Remark": "【PVP】啟用未登入懲罰 (未知作用)",
+        "Default": true,
+        "IsEnabled": true
+    },
+    "bEnableFastTravel": {
+        "Type": "Bool",
+        "Remark": "啟用快速旅行",
+        "Default": true,
+        "IsEnabled": true
+    },
+    "bIsStartLocationSelectByMap": {
+        "Type": "Bool",
+        "Remark": "允許從地圖選擇起始位置\nPS：若為關則出生在初始台地，死亡後依舊可以選擇其他出生點",
+        "Default": true,
+        "IsEnabled": true
+    },
+    "bExistPlayerAfterLogout": {
+        "Type": "Bool",
+        "Remark": "玩家全部登出後自動關服",
+        "Default": false,
+        "IsEnabled": true
+    },
+    "bEnableDefenseOtherGuildPlayer": {
+        "Type": "Bool",
+        "Remark": "【PVP】啟用公會戰",
+        "Default": false,
+        "IsEnabled": true
+    },
+    "CoopPlayerMaxNum": {
+        "Type": "Int",
+        "Remark": "隊伍最大人數",
+        "Default": 4,
+        "IsEnabled": true
+    },
+    "ServerPlayerMaxNum": {
+        "Type": "Int",
+        "Remark": "伺服器同時遊玩最大人數",
+        "Default": 32,
+        "IsEnabled": true
+    },
+    "ServerName": {
+        "Type": "Val",
+        "Remark": "伺服器名稱",
+        "Default": "Default Palworld Server",
+        "IsEnabled": true
+    },
+    "ServerDescription": {
+        "Type": "Val",
+        "Remark": "伺服器描述",
+        "Default": "",
+        "IsEnabled": true
+    },
+    "AdminPassword": {
+        "Type": "Val",
+        "Remark": "管理者密碼",
+        "Default": "",
+        "IsEnabled": true
+    },
+    "ServerPassword": {
+        "Type": "Val",
+        "Remark": "伺服器密碼",
+        "Default": "",
+        "IsEnabled": true
+    },
+    "PublicPort": {
+        "Type": "Int",
+        "Remark": "連接埠",
+        "Default": 8211,
+        "IsEnabled": true
+    },
+    "PublicIP": {
+        "Type": "Val",
+        "Remark": "IP",
+        "Default": "",
+        "IsEnabled": true
+    },
+    "RCONEnabled": {
+        "Type": "Bool",
+        "Remark": "啟用 RCON",
+        "Default": false,
+        "IsEnabled": true
+    },
+    "RCONPort": {
+        "Type": "Int",
+        "Remark": "RCON 連接埠",
+        "Default": 25575,
+        "IsEnabled": true
+    },
+    "Region": {
+        "Type": "Val",
+        "Remark": "地區",
+        "Default": "",
+        "IsEnabled": true
+    },
+    "bUseAuth": {
+        "Type": "Bool",
+        "Remark": "使用驗證",
+        "Default": true,
+        "IsEnabled": false
+    },
+    "BanListURL": {
+        "Type": "Val",
+        "Remark": "封禁列表來源",
+        "Default": "https://api.palworldgame.com/api/banlist.txt",
+        "IsEnabled": false
+    }
+}

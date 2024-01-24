@@ -1,0 +1,443 @@
+{
+    "Difficulty": {
+        "Type": "Option",
+        "Remark": "Game difficulty\nNote: Adjusting Difficult or Easy does not affect other parameters.",
+        "Default": "None",
+        "IsEnabled": true,
+        "Options": {
+            "None": "None",
+            "Easy": "Easy",
+            "Difficult": "Difficult"
+        }
+    },
+    "DayTimeSpeedRate": {
+        "Type": "Double",
+        "Remark": "Daytime passage speed\nNote: Default parameters are 30 minutes for day and night each. Increasing the value makes time pass faster, shortening both day and night.\nThe wild boss's perceived respawn time is 30 minutes. Increasing the value will make the boss respawn faster.",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 5
+    },
+    "NightTimeSpeedRate": {
+        "Type": "Double",
+        "Remark": "Nighttime passage speed\nNote: Default parameters are 30 minutes for day and night each. Increasing the value makes time pass faster, shortening both day and night.\nThe wild boss's perceived respawn time is 30 minutes. Increasing the value will make the boss respawn faster.",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 5
+    },
+    "ExpRate": {
+        "Type": "Double",
+        "Remark": "Experience multiplier",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 9999
+    },
+    "PalCaptureRate": {
+        "Type": "Double",
+        "Remark": "Capture probability multiplier\nNote: Parameter adjustment is highly sensitive, please adjust with caution. Difficult mode is 0.8, and Easy mode is 2.",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.5,
+        "MaxVal": 2
+    },
+    "PalSpawnNumRate": {
+        "Type": "Double",
+        "Remark": "Pal spawn quantity multiplier\nNote: Default parameters are 1 fixed boss and 1-2 wild pals.\nIf adjusted to 2, the fixed boss becomes 2, and wild pals spawn 2-4. Adjusting beyond 3 often leads to overlapping or falling out of the map, so please adjust with caution.",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.5,
+        "MaxVal": 9999
+    },
+    "PalDamageRateAttack": {
+        "Type": "Double",
+        "Remark": "Pal attack damage multiplier\nNote: The higher the number, the stronger the pals, including both player-owned and wild pals.",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 9999
+    },
+    "PalDamageRateDefense": {
+        "Type": "Double",
+        "Remark": "Pal damage absorption multiplier\nNote: The lower the number, the tougher the pals, including both player-owned and wild pals.",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 9999
+    },
+    "PlayerDamageRateAttack": {
+        "Type": "Double",
+        "Remark": "Player attack damage multiplier\nNote: The higher the number, the stronger the player.",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 9999
+    },
+    "PlayerDamageRateDefense": {
+        "Type": "Double",
+        "Remark": "Player damage absorption multiplier\nNote: The lower the number, the tougher the player.",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 9999
+    },
+    "PlayerStomachDecreaseRate": {
+        "Type": "Double",
+        "Remark": "Player satiety decrease multiplier\nNote: The lower the number, the slower the decrease, meaning less hunger.",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 5
+    },
+    "PlayerStaminaDecreaseRate": {
+        "Type": "Double",
+        "Remark": "Player stamina decrease multiplier\nNote: The lower the number, the slower the decrease, indicating more stamina.\nPlayer stamina affects the number of times they can gather, move, and roll in combat.",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 5
+    },
+    "PlayerAutoHPRegenRate": {
+        "Type": "Double",
+        "Remark": "Player automatic health regeneration multiplier",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 9999
+    },
+    "PlayerAutoHpRegenRateInSleep": {
+        "Type": "Double",
+        "Remark": "Player health regeneration multiplier during sleep",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 9999
+    },
+    "PalStomachDecreaseRate": {
+        "Type": "Double",
+        "Remark": "Pal satiety decrease multiplier\nNote: The lower the number, the slower the decrease, meaning less hunger.",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 5
+    },
+    "PalStaminaDecreaseRate": {
+        "Type": "Double",
+        "Remark": "Pal stamina decrease multiplier\nNote: The lower the number, the slower the decrease, indicating more stamina.\nPal stamina affects large world movement and skill casting frequency.",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 5
+    },
+    "PalAutoHPRegenRate": {
+        "Type": "Double",
+        "Remark": "Pal automatic health regeneration multiplier",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 9999
+    },
+    "PalAutoHpRegenRateInSleep": {
+        "Type": "Double",
+        "Remark": "Pal health regeneration multiplier during sleep\nNote: Health regeneration rate in Pal Terminal.",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 9999
+    },
+    "BuildObjectDamageRate": {
+        "Type": "Double",
+        "Remark": "Building damage multiplier",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.5,
+        "MaxVal": 3
+    },
+    "BuildObjectDeteriorationDamageRate": {
+        "Type": "Double",
+        "Remark": "Building deterioration speed multiplier\nNote: The higher the value, the faster the deterioration.",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0,
+        "MaxVal": 10
+    },
+    "CollectionDropRate": {
+        "Type": "Double",
+        "Remark": "Item collection amount multiplier\nNote: Example - Hitting small Pal ore with a stone hammer yields 1 Pal fragment with a default requirement of 6 hits averaging 19 damage. If set to 3, it would take 2 hits averaging 19 damage.",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.5,
+        "MaxVal": 9999
+    },
+    "CollectionObjectHpRate": {
+        "Type": "Double",
+        "Remark": "Collectible item health multiplier",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.5,
+        "MaxVal": 3
+    },
+    "CollectionObjectRespawnSpeedRate": {
+        "Type": "Double",
+        "Remark": "Collectible item respawn interval\nNote: Default parameters - Trees and large ores respawn every 1 hour. Setting to 0 triggers immediate respawn (if fixed point ores aren't respawning, consider restarting the server to check).",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0,
+        "MaxVal": 3
+    },
+    "EnemyDropItemRate": {
+        "Type": "Double",
+        "Remark": "Item drop quantity multiplier\nNote: Tested with no upper limit.",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.5,
+        "MaxVal": 9999
+    },
+    "DeathPenalty": {
+        "Type": "Option",
+        "Remark": "Death penalty",
+        "Default": "All",
+        "IsEnabled": true,
+        "Options": {
+            "ItemAndEquipment": "Drop all items and equipment",
+            "Item": "Drop items excluding equipped gear and weapons",
+            "All": "Drop all items and team Pals (excluding Pals with items that cannot be dropped, such as saddles)",
+            "None": "Do not drop anything"
+        }
+    },
+    "bEnablePlayerToPlayerDamage": {
+        "Type": "Bool",
+        "Remark": "【PVP】Enable player-to-player damage in PvP",
+        "Default": false,
+        "IsEnabled": true
+    },
+    "bEnableFriendlyFire": {
+        "Type": "Bool",
+        "Remark": "【PVP】Enable friendly fire in PvP",
+        "Default": false,
+        "IsEnabled": true
+    },
+    "bEnableInvaderEnemy": {
+        "Type": "Bool",
+        "Remark": "Will invasion events occur?",
+        "Default": true,
+        "IsEnabled": true
+    },
+    "bActiveUNKO": {
+        "Type": "Bool",
+        "Remark": "Enable excrement (UNKO)",
+        "Default": false,
+        "IsEnabled": true
+    },
+    "bEnableAimAssistPad": {
+        "Type": "Bool",
+        "Remark": "Enable gamepad aim assist",
+        "Default": true,
+        "IsEnabled": true
+    },
+    "bEnableAimAssistKeyboard": {
+        "Type": "Bool",
+        "Remark": "Enable keyboard and mouse aim assist",
+        "Default": false,
+        "IsEnabled": true
+    },
+    "DropItemMaxNum": {
+        "Type": "Int",
+        "Remark": "Maximum dropped items in the world\nNote: Recommended 300-500",
+        "Default": 3000,
+        "IsEnabled": true,
+        "MinVal": 0,
+        "MaxVal": 5000
+    },
+    "DropItemMaxNum_UNKO": {
+        "Type": "Int",
+        "Remark": "Maximum excrement (UNKO) dropped items in the world",
+        "Default": 100,
+        "IsEnabled": true,
+        "MinVal": 0,
+        "MaxVal": 5000
+    },
+    "BaseCampMaxNum": {
+        "Type": "Int",
+        "Remark": "Maximum number of bases",
+        "Default": 128,
+        "IsEnabled": true
+    },
+    "BaseCampWorkerMaxNum": {
+        "Type": "Int",
+        "Remark": "Maximum number of base workers\nNote: Numbers over 15 currently do not take effect. Placing the save file into single-player allows modification of the limit to 20.",
+        "Default": 15,
+        "IsEnabled": true,
+        "MinVal": 1,
+        "MaxVal": 20
+    },
+    "DropItemAliveMaxHours": {
+        "Type": "Double",
+        "Remark": "Dropped item retention time (hours)\nNote: Recommended 0.5 to prevent excessive dropped items causing lag.",
+        "Default": 1,
+        "IsEnabled": true
+    },
+    "bAutoResetGuildNoOnlinePlayers": {
+        "Type": "Bool",
+        "Remark": "Enable automatic clearing of guild members",
+        "Default": false,
+        "IsEnabled": true
+    },
+    "AutoResetGuildTimeNoOnlinePlayers": {
+        "Type": "Double",
+        "Remark": "Automatic clearing of guild members time (hours)",
+        "Default": 72,
+        "IsEnabled": true
+    },
+    "GuildPlayerMaxNum": {
+        "Type": "Int",
+        "Remark": "Maximum number of guild members",
+        "Default": 20,
+        "IsEnabled": true,
+        "MinVal": 1,
+        "MaxVal": 100
+    },
+    "PalEggDefaultHatchingTime": {
+        "Type": "Double",
+        "Remark": "Time required for giant egg hatching (hours)\nNote: Other eggs will also have corresponding changes in hatching time.",
+        "Default": 72,
+        "IsEnabled": true,
+        "MinVal": 0,
+        "MaxVal": 240
+    },
+    "WorkSpeedRate": {
+        "Type": "Double",
+        "Remark": "Work speed multiplier\nNote: Not recommended to exceed 5.",
+        "Default": 1,
+        "IsEnabled": true,
+        "MinVal": 0.1,
+        "MaxVal": 5
+    },
+    "bIsMultiplay": {
+        "Type": "Bool",
+        "Remark": "Enable multiplayer",
+        "Default": false,
+        "IsEnabled": true
+    },
+    "bIsPvP": {
+        "Type": "Bool",
+        "Remark": "【PVP】Enable PvP",
+        "Default": false,
+        "IsEnabled": true
+    },
+    "bCanPickupOtherGuildDeathPenaltyDrop": {
+        "Type": "Bool",
+        "Remark": "【PVP】Allow picking up other guild's death penalty drops in PvP",
+        "Default": false,
+        "IsEnabled": true
+    },
+    "bEnableNonLoginPenalty": {
+        "Type": "Bool",
+        "Remark": "【PVP】Enable non-login penalty in PvP (Unknown effect)",
+        "Default": true,
+        "IsEnabled": true
+    },
+    "bEnableFastTravel": {
+        "Type": "Bool",
+        "Remark": "Enable fast travel",
+        "Default": true,
+        "IsEnabled": true
+    },
+    "bIsStartLocationSelectByMap": {
+        "Type": "Bool",
+        "Remark": "Allow selecting starting location from the map\nNote: If disabled, spawn on the initial plateau. After death, you can still choose other spawn points.",
+        "Default": true,
+        "IsEnabled": true
+    },
+    "bExistPlayerAfterLogout": {
+        "Type": "Bool",
+        "Remark": "Automatically shut down the server after all players log out",
+        "Default": false,
+        "IsEnabled": true
+    },
+    "bEnableDefenseOtherGuildPlayer": {
+        "Type": "Bool",
+        "Remark": "【PVP】Enable guild battles",
+        "Default": false,
+        "IsEnabled": true
+    },
+    "CoopPlayerMaxNum": {
+        "Type": "Int",
+        "Remark": "Maximum number of players in a team",
+        "Default": 4,
+        "IsEnabled": true
+    },
+    "ServerPlayerMaxNum": {
+        "Type": "Int",
+        "Remark": "Maximum number of players playing on the server at the same time",
+        "Default": 32,
+        "IsEnabled": true
+    },
+    "ServerName": {
+        "Type": "Val",
+        "Remark": "Server name",
+        "Default": "Default Palworld Server",
+        "IsEnabled": true
+    },
+    "ServerDescription": {
+        "Type": "Val",
+        "Remark": "Server description",
+        "Default": "",
+        "IsEnabled": true
+    },
+    "AdminPassword": {
+        "Type": "Val",
+        "Remark": "Admin password",
+        "Default": "",
+        "IsEnabled": true
+    },
+    "ServerPassword": {
+        "Type": "Val",
+        "Remark": "Server password",
+        "Default": "",
+        "IsEnabled": true
+    },
+    "PublicPort": {
+        "Type": "Int",
+        "Remark": "Port",
+        "Default": 8211,
+        "IsEnabled": true
+    },
+    "PublicIP": {
+        "Type": "Val",
+        "Remark": "IP",
+        "Default": "",
+        "IsEnabled": true
+    },
+    "RCONEnabled": {
+        "Type": "Bool",
+        "Remark": "Enable RCON",
+        "Default": false,
+        "IsEnabled": true
+    },
+    "RCONPort": {
+        "Type": "Int",
+        "Remark": "RCON port",
+        "Default": 25575,
+        "IsEnabled": true
+    },
+    "Region": {
+        "Type": "Val",
+        "Remark": "Region",
+        "Default": "",
+        "IsEnabled": true
+    },
+    "bUseAuth": {
+        "Type": "Bool",
+        "Remark": "Use authentication",
+        "Default": true,
+        "IsEnabled": false
+    },
+    "BanListURL": {
+        "Type": "Val",
+        "Remark": "Ban list source",
+        "Default": "https://api.palworldgame.com/api/banlist.txt",
+        "IsEnabled": false
+    }
+}
