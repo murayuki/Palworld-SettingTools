@@ -148,6 +148,7 @@ namespace PalWorldSetting
             string RecordPath = ZData.Setting.Read("OpenRecord", "Setting");
             if (File.Exists(RecordPath))
             {
+                ConfigPath = RecordPath;
                 LoadData(RecordPath);
             }
         }
