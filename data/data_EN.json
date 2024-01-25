@@ -266,7 +266,7 @@
     },
     "BaseCampWorkerMaxNum": {
         "Type": "Int",
-        "Remark": "Maximum number of base workers\nNote: Numbers over 15 currently do not take effect. Placing the save file into single-player allows modification of the limit to 20.",
+        "Remark": "Maximum number of base workers\nNote: Numbers over 15 currently do not take effect. \nQuantity 20, please refer to the README data.",
         "Default": 15,
         "IsEnabled": true,
         "MinVal": 1,

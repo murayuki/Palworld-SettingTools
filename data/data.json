@@ -266,7 +266,7 @@
     },
     "BaseCampWorkerMaxNum": {
         "Type": "Int",
-        "Remark": "據點工作帕魯數量上限\nPS：數字超過15目前不生效\n似乎將存檔放到單人進行修改數量上限20",
+        "Remark": "據點工作帕魯數量上限\nPS：數字超過15目前不生效\n數量 20 請參考 README 資料",
         "Default": 15,
         "IsEnabled": true,
         "MinVal": 1,
